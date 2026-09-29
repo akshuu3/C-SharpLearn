@@ -1,0 +1,275 @@
+﻿Operators in C#
+----------------
+
+Definition:
+An operator performs an operation on one or more operands (variables, constants, or literals).
+Most operators are represented by symbols and map to predefined behavior or methods.
+
+1) Unary operators
+   - Operate on a single operand.
+
+   1.1 Increment / Decrement
+       - Post-increment (a++): returns the original value, then increments.
+         Example:
+             int a = 10, b;
+             b = a++;   // after: a == 11, b == 10
+
+       - Post-decrement (a--): returns the original value, then decrements.
+         Example:
+             int a = 10, b;
+             b = a--;   // after: a == 9, b == 10
+
+       - Pre-increment (++a): increments first, then returns the new value.
+         Example:
+             int a = 10, b;
+             b = ++a;   // after: a == 11, b == 11
+
+       - Pre-decrement (--a): decrements first, then returns the new value.
+         Example:
+             int a = 10, b;
+             b = --a;   // after: a == 9, b == 9
+
+   1.2 Unary minus
+       - Negates a numeric value.
+         Example:
+             int a = 5;
+             Console.WriteLine(-a); // prints -5
+
+2) Binary operators
+   - Operate on two operands (e.g., +, -, *, /, %, ==, !=, <, >, &&, ||).
+
+   2.1 Arithmetic operators
+       - Addition (+), Subtraction (-), Multiplication (*), Division (/), Modulus (%)
+         Example:
+             int a = 10, b = 3;
+             Console.WriteLine(a + b); // 13
+             Console.WriteLine(a - b); // 7
+             Console.WriteLine(a * b); // 30
+             Console.WriteLine(a / b); // 3
+             Console.WriteLine(a % b); // 1
+
+   2.2 Relational / Comparison operators
+       - Compare two values and return a boolean.
+         - Equal to (==), Not equal to (!=), Greater than (>), Less than (<),
+           Greater than or equal to (>=), Less than or equal to (<=)
+         Example:
+             int a = 5, b = 10;
+             Console.WriteLine(a == b); // false
+             Console.WriteLine(a != b); // true
+             Console.WriteLine(a > b);  // false
+             Console.WriteLine(a < b);  // true
+             Console.WriteLine(a >= b); // false
+             Console.WriteLine(a <= b); // true
+
+   2.3 Logical operators
+       - Used with boolean operands.
+         - Logical AND (&&): true if both operands true.
+         - Logical OR (||): true if at least one operand true.
+         - Logical NOT (!): negates the boolean value.
+         Example:
+             bool x = true, y = false;
+             Console.WriteLine(x && y); // false
+             Console.WriteLine(x || y); // true
+             Console.WriteLine(!x);     // false
+
+   2.4 Assignment operators
+       - Assign a value to a variable.
+         - Simple assignment (=), compound assignment (+=, -=, *=, /=, %=)
+         Example:
+             int a = 5;
+             a += 3; // equivalent to a = a + 3
+             Console.WriteLine(a); // 8
+
+3) Ternary operator
+   - Conditional operator ?: uses three operands.
+     Example:
+         int a = 5;
+         string result = (a > 0) ? "positive" : "non-positive";
+
+~ Program File : ProjectPractice\Ternary.cs 
+
+4) if - else statements (conditional blocks)
+   - Used to execute code based on conditions.
+
+   4.1 Simple if
+       Executes when condition is true.
+       Example:
+           if (condition)
+           {
+               // statements executed if condition is true
+           }
+
+   4.2 if-else
+       Example:
+           if (condition)
+           {
+               // executed if condition is true
+           }
+           else
+           {
+               // executed if condition is false
+           }
+
+    4.3 nested if-else
+        it is used to create multiple condition based program using nested sequence.
+        it combine more than one if-else block into nesting.
+
+       Example:
+           if (condition1)
+           {
+               // executed if condition1 is true
+               if (condition2)
+               {
+                   // executed if condition2 is true
+               }
+               else
+               {
+                   // executed if condition2 is false
+               }
+           }
+           else
+           {
+              // executed if condition1 is false
+              if (condition3)
+              {
+                  // executed if condition1 is false and condition3 is true
+              }
+              else
+              {
+                  // executed if both condition1 and condition3 are false
+              }
+           }
+
+    4.5: Ladder or else-if statement
+         it is combination of single if, multiple else if and else block.
+
+       Example:
+           if (condition1)
+           {
+               // executed if condition1 is true
+           }
+           else if (condition2)
+           {
+               // executed if condition1 is false and condition2 is true
+           }
+           else if (condition3)
+           {
+               // executed if both condition1 and condition2 are false and condition3 is true
+           }
+           else
+           {
+               // executed if all conditions are false
+           }
+
+    ~ Program File : ProjectPractice\if-else.cs
+
+    5.switch statement
+       it is used to create option based program, we pass option under switch() that will match from optionvalue and execute particular case.
+       Example:
+           switch (expression)
+           {
+               case value1:
+                   // executed if expression equals value1
+                   break;
+               case value2:
+                   // executed if expression equals value2
+                   break;
+               default:
+                   // executed if expression does not match any case
+                   break;
+           }
+
+  ~ Program File : ProjectPractice\switch-case.cs   
+
+  6. Loops
+     It is used to create range based program using common repetable block.
+     it reduce repeated program code and provide easy syntax approach to solve complex problem to iterate multiple data.
+     it uses three different component:
+        1) initialization: starting point /step = 1
+        2) condition: ending point / step <= 10
+        3)itretion : increment or decrement / step++
+        
+    - Type Of Loop: 
+        1) Entry control: first check condition then execute statement
+            6.1 for loop
+                for(init;condition; iteration)
+                {
+                    Statement;
+                }
+            6.2 while loop: it is used to create relative condition or infinite condition based program.
+                 Example:
+                 for example if we want to print the complete data of file then we use file data size should not be empty as a condition.
+                 it define all statements sperately.
+                    
+                    a) init;
+                    while(condition)
+                    {
+                        statement;
+                        iteration
+                     }
+
+                b) infine condition
+                while(true)
+                {
+                    Statement;
+                }
+
+          6.3 exit control loop : do while loop 
+          
+          first execute loop statement then check condition.
+init;
+do I
+{
+Statement;
+Increment;
+}while(condition);
+
+
+
+---------------------
+we will create more than one for loop using nesting sequence. it contains combination of outer for loop and inner for loop.
+outer for loop execute and inner for loop will be executed till last, when outer for loop condition will false then loop will terminate.
+for(init;condition; iteration)
+{
+I
+for(init;condition; iteration)
+{
+}
+}
+
+
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=5;j++)
+{
+Console.Write(j);
+}
+Console.WriteLine();
+}
+1 2 3 4 5
+
+
+
+    ~ Program File : ProjectPractice\forLoop.cs
+
+
+    Break and Continue statement
+Break statement is used to terminate the loop based on condition.
+for(int i=1;i<=10;i++)
+{
+if(i==5)
+break;
+console.writeline(i);
+}
+
+Continue statement is used to skip the current iteration and move to
+the next iteration.
+for(int i=1;i<=10;i++)
+{
+if(i==5)
+continue;
+console.writeline(i);
+}
+    
+
+   

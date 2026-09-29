@@ -1,0 +1,107 @@
+﻿OOPs (Object-Oriented Programming System)
+==========================================
+
+OOPs (Object-Oriented Programming System) is a programming paradigm that
+provides a set of principles for structuring programs around objects. It
+supports dynamic memory allocation, security, code reusability, and
+usability.
+
+Most modern programming languages follow OOPs principles, which are
+implemented through a defined set of rules.
+
+
+1. MANDATORY RULES
+-------------------
+
+Class and Object
+
+Class:
+A class is the blueprint of an object - it defines the characteristics
+(data members) and behavior (member functions) that its objects will have.
+
+A single class block can define one object or multiple related objects;
+when multiple objects are declared together, they should be related to
+one another.
+
+Example:
+
+    class ClassName
+    {
+        private DataType variableName;
+
+        public ReturnType MethodName()
+        {
+            // code block...
+        }
+    }
+
+    class MainClass
+    {
+        public static void Main()
+        {
+            ClassName ref = new ClassName();
+        }
+    }
+
+Object:
+An object is an instance of a class, created using the "new" keyword. It
+is what gives the class definition real memory and behavior at runtime.
+
+1.Data Members (Variables) - Characteristics
+    it is called variables that will be declared inside of class
+
+    type of variable : 
+        1. Static OR cLASS tYPE   : this type of variable memory created at compile time and we can not re cretaed memory a
+        2. dynamic or Instance type  :
+
+2. Member Functions (Methods) - Behavior
+    Member functions are the functions defined within a class that define
+    the behavior or actions that an object can perform.
+
+3. Constructor - Object Initialization
+    A constructor is a special member function that is automatically called
+    when an object is created. It is used to initialize the object's data
+    members.
+
+4.Properties - Accessors and Mutators
+    Properties are special member functions that provide controlled access
+    to an object's data members. They allow you to get or set the values of
+    private variables.
+
+5. Inner Class - Class within a Class
+    An inner class is a class defined within another class. It can access
+    the members of the outer class and is used to logically group classes
+    that are only used in one place.
+
+6.Object 
+
+7.Indexer - Object Reference
+    An indexer allows an object to be indexed like an array. It provides a
+    way to access the data members of a class using array-like syntax.
+
+
+
+
+
+2. OPTIONAL RULES (PILLARS OF OOPS)
+-------------------------------------
+
+Data Encapsulation   - Code Security
+    Binds data and methods together within a class and restricts direct
+    access to the data.
+
+Data Abstraction     - Layer Security
+    Hides internal implementation details and exposes only the necessary
+    functionality.
+
+Polymorphism (Static & Dynamic) - Usability
+    Lets a method or object take many forms.
+        Static Polymorphism  -> achieved through Overloading
+            (same method name, different parameters, resolved at compile
+            time)
+        Dynamic Polymorphism -> achieved through Overriding
+            (same method signature, redefined in a derived class, resolved
+            at runtime); this also enables Extendibility
+
+Inheritance - Code Reusability
+    Lets a class acquire the properties and behavior of another class.
